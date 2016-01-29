@@ -1,6 +1,7 @@
 (ns clojure-oop.core
   (:require [clojure-oop.oop.util :refer [create]]
-            [clojure-oop.account :refer :all]))
+            [clojure-oop.account :refer
+             [Account create debit get-balance set-balance]]))
 
 (defn -main [& args]
   (let [a1 (create Account 1234 99.99)]
