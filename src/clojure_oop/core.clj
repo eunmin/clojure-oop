@@ -1,6 +1,6 @@
 (ns clojure-oop.core)
 
-(defn invoke-for [object]
+(defn invoke-fn [object]
   (fn [method & args]
     (apply method (cons object args))))
 
@@ -8,7 +8,7 @@
   ([account-number]
    (new-account account-number 0))
   ([account-number balance]
-   (invoke-for (atom {:account-number account-number
+   (invoke-fn (atom {:account-number account-number
                       :balance balance}))))
 
 (defn get-balance [account]
