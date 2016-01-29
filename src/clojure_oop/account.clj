@@ -4,7 +4,7 @@
   ([account-number]
    (Account account-number 0))
   ([account-number balance]
-   {:account-number account-number :balance balance}))
+   (atom {:account-number account-number :balance balance})))
 
 (defn get-balance [account]
   (:balance @account))

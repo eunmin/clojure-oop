@@ -5,6 +5,6 @@
     (apply method (cons object args))))
 
 (defn create [initializer & args]
-  (invoke-fn (atom (apply initializer args))))
+  (invoke-fn (apply initializer args)))
 
 
